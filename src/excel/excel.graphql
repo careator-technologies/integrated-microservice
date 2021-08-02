@@ -1,0 +1,26 @@
+type Excel {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+scalar Upload
+
+input CreateExcelInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateExcelInput {
+  id: Int!
+}
+
+type Query {
+  excel: [Excel]!
+}
+
+type Mutation {
+  createExcel(createExcelInput: CreateExcelInput!): Excel!
+  updateExcel(updateExcelInput: UpdateExcelInput!): Excel!
+  removeExcel(id: Int!): Excel
+  uploadFile(file: Upload!): Boolean!
+}
